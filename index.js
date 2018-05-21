@@ -176,7 +176,24 @@ function RollDice(dice) {
 }  
 
 function quit(){
-    // need to update their balance in Mongo
+      var newUser = new PlayerObject( $('#firstName').val(), $('#lastName').val(), balance)
+    $.ajax({
+        type: 'POST',
+        data: newUser,
+        url: '/users/adduser',
+        dataType: 'JSON'
+    }).done(function( response ) {
+        if (response.msg === '') {
+            // Clear the form inputs
+            $('#firstName').val('');
+            $('#lastName').val('');
+            document.location.href = "#pickplayer"; // move the html back to the pickplayer sub-page
+        }
+        else {
+            // If something goes wrong, alert the error message that our service returned
+            alert('Error: ' + response.msg);
+        }
+    });
     
     document.location.href = "#Home";
 }

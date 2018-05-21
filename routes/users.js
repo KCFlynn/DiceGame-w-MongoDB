@@ -36,21 +36,18 @@ router.get('/userlist', function(req, res) {
 //  router.???('/userlist', function(req, res) {
 //  users.update({name: 'foo'}, {name: 'bar'})
 
-  /* Modify a user 
+/* Modify a user */
 router.put('/modifyuser/:id', function(req, res) {
   var db = req.db;
-  collection = db.get('userlist');
-  var userToModify = req.params.id;  // split the 1 arg passed up back into 2
-  var bothnames = userToModify.split('*');
-  var oldName = bothnames[0];
-  var newName = bothnames[1];
- 
-  collection.update( 
-    { fullname: oldName },  // query to pick which document to modify
-    { $set: { "fullname": newName } }, function (err, doc, next) {  // can do more than one at a time
-      res.sendStatus(200);
-    })
-});*/
+  var collection = db.get('playerlist');
+  var userToUpdate = req.params.id;
+  collection.update( { '_id': userToUpdate },
+  { $set: { current_balance: balance }}, function (err, doc, next) {  // can do more than one at a time
+      res.send(
+      (err === null) ? { msg: '' } : { msg: err }
+    );
+    });
+});
 
 
 
