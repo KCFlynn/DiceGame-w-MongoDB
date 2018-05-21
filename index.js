@@ -176,7 +176,7 @@ function RollDice(dice) {
 }  
 
 function quit(){
-      var newUser = new PlayerObject( $('#firstName').val(), $('#lastName').val(), $('#balance').val())
+      var newUser = new PlayerObject( $('#firstName').val(), $('#lastName').val(), $('#balance').val(balance))
     $.ajax({
         type: 'PUT',
         data: newUser,
