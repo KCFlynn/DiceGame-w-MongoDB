@@ -34,10 +34,10 @@
 
         <!--pickplayer page-->
      <div data-role="page" id="pickplayer">
-        <div data-role="header">
+        <div data-role="header"data-theme="a">
             <h1>Diamond Dave's Delightful Dice</h1>
         </div>
-        <div data-role="content">    
+        <div data-role="content"data-theme="a">    
             <div id="userlist">
                <ul data-role = "listview" id = "playerul"></ul>
             </div><br /><br /><br />
@@ -46,7 +46,7 @@
             <a href="#CreatePage" data-role="button" data-transition='flip'>Create New Account</a>
         </div>
 
-        <div data-role="footer">
+        <div data-role="footer"data-theme="a">
            <p>Copyright &copy; Kelly Flynn 2018</p>
         </div>
     </div>
@@ -55,11 +55,11 @@
     <!--Create Account page-->
     <div data-role="page" id="CreatePage">
 
-        <div data-role="header">
+        <div data-role="header"data-theme="a">
             <h1>Diamond Dave's Delightful Dice</h1>
         </div>
 
-        <div data-role="content">
+        <div data-role="content"data-theme="a">
             <p>Please create an account</p>
             <input type="text" id="firstName" value="" placeholder="Enter first name"/>
             <input type="text" id="lastName" value="" placeholder="Enter last name"/>     
@@ -67,18 +67,18 @@
             <a href="#PickBet" data-role="button" data-transition='pop'>Pick Your Bet Size</a>
         </div>
 
-        <div data-role="footer">
+        <div data-role="footer"data-theme="a">
            <p>Copyright &copy; Kelly Flynn 2018</p>
         </div>
     </div>
     <!--Pick Bet page-->
     <div data-role="page" id="PickBet">
 
-        <div data-role="header">
+        <div data-role="header"data-theme="a">
             <h1>Diamond Dave's Delightful Dice</h1>
         </div>
 
-        <div data-role="content">
+        <div data-role="content"data-theme="a">
             <p id="welcome">xxxxx</p>
             <p>Pick your bet size, $1, $2, or $5 </p>
             <!-- hidden    a place to stash the user ID -->
@@ -89,19 +89,19 @@
             <input type="submit" value="Bet $5" id="bet5"/>
         </div>
 
-        <div data-role="footer">
+        <div data-role="footer"data-theme="a">
             <p>Copyright &copy; Kelly Flynn 2018</p>
         </div>
     </div>
     <!--Play Dice page-->
     <div data-role="page" id="game">
 
-        <div data-role="header" data-theme='c'>
+        <div data-role="header" data-theme='a'>
             <h1>Diamond Dave's Delightful Dice</h1>
         </div>
 
          <!-- game content -->    
-         <div data-role="content" data-theme='b'>
+         <div data-role="content" data-theme='a'>
             <img id="image1" src="./images/dice-1.jpg" alt="Dice Image" style="width:50px;height:50px;">
             &nbsp;&nbsp;&nbsp;&nbsp;
         
@@ -128,30 +128,30 @@
     <!--Win page-->
     <div data-role="page" id="WinPage">
 
-        <div data-role="header">
+        <div data-role="header"data-theme="a">
             <h1>Diamond Dave's Delightful Dice</h1>                          
         </div>
 
-        <div data-role="content">       
+        <div data-role="content"data-theme="a">       
             <p>Congratulations! You won!</p>    
             <a href="#Home" data-role="button" data-transition='pop' >Play Again</a>
         </div>
 
-        <div data-role="footer">
+        <div data-role="footer"data-theme="a">
            <p>Copyright &copy; Kelly Flynn 2018</p>
         </div>
     </div>
     <!--Lose page-->
     <div data-role="page" id="LosePage">
-        <div data-role="header">
+        <div data-role="header"data-theme="a">
             <h1>Diamond Dave's Delightful Dice</h1>
         </div>
-        <div data-role="content">    
+        <div data-role="content"data-theme="a">    
             <p>Sorry! You lost!</p>        
             <a href="#Home" data-role="button" data-transition='pop'>Play Again</a>
         </div>
 
-        <div data-role="footer">
+        <div data-role="footer"data-theme="a">
            <p>Copyright &copy; Kelly Flynn 2018</p>
         </div>
     </div>
