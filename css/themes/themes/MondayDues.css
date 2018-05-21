@@ -226,7 +226,7 @@ html .ui-body-a .ui-bar-inherit,
 html body .ui-group-theme-a .ui-bar-inherit {
 	background-color: #29abe2 /*{a-bar-background-color}*/;
 	border-color: #29abe2 /*{a-bar-border}*/;
-	color: #f2f2f2 /*{a-bar-color}*/;
+	color: #f3cb77 /*{a-bar-color}*/;
 	text-shadow: 0 /*{a-bar-shadow-x}*/ 0 /*{a-bar-shadow-y}*/ 0 /*{a-bar-shadow-radius}*/ #eeeeee /*{a-bar-shadow-color}*/;
 	font-weight: bold;
 }
