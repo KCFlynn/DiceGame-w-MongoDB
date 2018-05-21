@@ -228,7 +228,7 @@ html body .ui-group-theme-a .ui-bar-inherit {
 	border-color: #29abe2 /*{a-bar-border}*/;
 	color: #f3cb77 /*{a-bar-color}*/;
 	text-shadow: 0 /*{a-bar-shadow-x}*/ 0 /*{a-bar-shadow-y}*/ 0 /*{a-bar-shadow-radius}*/ #f3cb77 /*{a-bar-shadow-color}*/;
-	/*font-weight: bold;*/
+	font-weight: normal;
 }
 .ui-bar-a {
 	border-width: 1px;
