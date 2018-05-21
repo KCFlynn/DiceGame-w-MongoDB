@@ -178,15 +178,13 @@ function RollDice(dice) {
 function quit(){
       var newUser = new PlayerObject( $('#firstName').val(), $('#lastName').val(), balance)
     $.ajax({
-        type: 'POST',
+        type: 'PUT',
         data: newUser,
         url: '/users/adduser',
         dataType: 'JSON'
     }).done(function( response ) {
         if (response.msg === '') {
-            // Clear the form inputs
-            $('#firstName').val('');
-            $('#lastName').val('');
+        
             document.location.href = "#pickplayer"; // move the html back to the pickplayer sub-page
         }
         else {
