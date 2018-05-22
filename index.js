@@ -176,12 +176,12 @@ function RollDice(dice) {
 }  
 
 function quit(){
-      var updateUser = PlayerObject( $('#firstName').val(), $('#lastName').val(), $('#balance').val(balance))
-    $.ajax({
+       setCurrent_index(state.current_fullName)
+    var userID = userArray[state.current_index]._id;
+    // pass up the full name, deal with splitting on the server
+       $.ajax({
         type: 'PUT',
-        data: updateUser,
-        url: '/users/updateuser',
-        dataType: 'JSON'
+        url: '/users/updateuser/' + userID
     }).done(function( response ) {
         if (response.msg === '') {
         
