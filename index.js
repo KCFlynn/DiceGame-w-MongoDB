@@ -180,7 +180,7 @@ function quit(){
     $.ajax({
         type: 'PUT',
         data: updateUser,
-        url: '/users/updateUser',
+        url: '/users/updateuser',
         dataType: 'JSON'
     }).done(function( response ) {
         if (response.msg === '') {
