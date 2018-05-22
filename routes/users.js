@@ -37,7 +37,7 @@ router.get('/userlist', function(req, res) {
 //  users.update({name: 'foo'}, {name: 'bar'})
 
 /* Modify a user */
-router.put('/modifyuser/:id', function(req, res) {
+router.put('/updateUser/:id', function(req, res) {
   var db = req.db;
   var collection = db.get('playerlist');
   var userToUpdate = req.params.id;
