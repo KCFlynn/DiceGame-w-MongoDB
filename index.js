@@ -176,7 +176,7 @@ function RollDice(dice) {
 }  
 
 function quit(){
-       setCurrent_index(state.current_fullName, state.current_balance)
+       setCurrent_index(state.current_balance)
     var userID = userArray[state.current_index]._id;
     // pass up the full name, deal with splitting on the server
        $.ajax({
