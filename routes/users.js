@@ -41,8 +41,11 @@ router.put('/updateuser/:id', function(req, res) {
   var db = req.db;
   var collection = db.get('playerlist');
   var userToUpdate = req.params.id;
-  collection.update( { '_id': userToUpdate },
-  { $set: { current_balance: balance }}, function (err, doc, next) {  // can do more than one at a time
+    var bothParams = userToUpdate.split('*');
+    var ourMongoBalance = bothParams[1];
+    //we need a variable here that stores the user's balance
+  collection.update( { '_id': userToUpdate, }, 
+  { $set: { "MongoBalance": ourMongoBalance }}, function (err, doc, next) {  // can do more than one at a time
       res.send(
       (err === null) ? { msg: '' } : { msg: err }
     );
