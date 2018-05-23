@@ -176,7 +176,7 @@ function RollDice(dice) {
 }  
 
 function quit(){
-      var updateUser = PlayerObject( $('#firstName').val(), $('#lastName').val(), $('#balance').val(balance))
+      var updateUser = PlayerObject( $('#firstName').val(), $('#lastName').val(), state.current_balance)
     $.ajax({
         type: 'PUT',
         data: updateUser,
