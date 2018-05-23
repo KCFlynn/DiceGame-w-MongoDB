@@ -176,7 +176,7 @@ function RollDice(dice) {
 }  
 
 function quit(){
-    var playerBalance = parseInt(state.current_balance);
+   /* var playerBalance = parseInt(state.current_balance);
       var updateUser = PlayerObject( $('#firstName').val(), $('#lastName').val(), $('#balance').val(balance))+ '*' + playerBalance;
     
     $.ajax({
@@ -195,7 +195,15 @@ function quit(){
         }
     });
     
-    document.location.href = "#Home";
+    document.location.href = "#Home"; */
+    
+    $.ajax({
+    type: 'PUT',
+    url: '/users/modifyuser/' + oldName + '*' +newName  // passsing 2 arguements as one
+    }).done(function( response ) {
+      var oldName =  $('#modifyUserName').val('');
+      var newName =  $('#newUserName').val('');
+      window.location.reload()
 }
 
 function setCurrent_index(fullName) {
