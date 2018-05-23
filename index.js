@@ -196,10 +196,12 @@ function quit(){
     });
     
     document.location.href = "#Home"; */
+    var playerBalance = parseInt(state.current_balance);
+    var userID = userArray[state.current_index]._id;
     
     $.ajax({
     type: 'PUT',
-    url: '/users/modifyuser/' + oldName + '*' +newName  // passsing 2 arguements as one
+    url: '/users/updateuser' + userID + '*' + playerBalance  // passsing 2 arguements as one
     }).done(function( response ) {
       var oldName =  $('#modifyUserName').val('');
       var newName =  $('#newUserName').val('');
