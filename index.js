@@ -203,10 +203,19 @@ function quit(){
     type: 'PUT',
     url: '/users/updateuser' + userID + '*' + playerBalance  // passsing 2 arguements as one
     }).done(function( response ) {
-      var oldName =  $('#modifyUserName').val('');
-      var newName =  $('#newUserName').val('');
-      window.location.reload()
+      
+      if (response.msg === '') {
+        
+            document.location.href = "#pickplayer"; // move the html back to the pickplayer sub-page
+        }
+        else {
+            // If something goes wrong, alert the error message that our service returned
+            alert('Error: ' + response.msg);
+        }
+    });
+    document.location.href = "#Home";
 }
+    
 
 function setCurrent_index(fullName) {
     var pointer = 0;
