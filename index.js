@@ -181,7 +181,7 @@ function quit(){
     
     $.ajax({
     type: 'PUT',
-    url: '/users/updateuser' + userID + '*' + playerBalance  // passsing 2 arguements as one
+    url: '/users/updateuser/' + userID + '*' + playerBalance  // passsing 2 arguements as one
     }).done(function( response ) {
       
       if (response.msg === '') {
