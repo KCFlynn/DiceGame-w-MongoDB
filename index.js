@@ -176,7 +176,26 @@ function RollDice(dice) {
 }  
 
 function quit(){
-       setCurrent_index(state.current_fullName)
+        var playerBalance = parseInt(state.current_balance);
+    var userID = userArray[state.current_index]._id;
+    
+    $.ajax({
+    type: 'PUT',
+    url: '/users/updateuser' + userID + '*' + playerBalance  // passsing 2 arguements as one
+    }).done(function( response ) {
+      
+      if (response.msg === '') {
+        
+            document.location.href = "#pickplayer"; // move the html back to the pickplayer sub-page
+        }
+        else {
+            // If something goes wrong, alert the error message that our service returned
+            alert('Error: ' + response.msg);
+        }
+    });
+    document.location.href = "#Home";
+}
+      /* setCurrent_index(state.current_fullName)
     var userID = userArray[state.current_index]._id;
     // pass up the full name, deal with splitting on the server
        $.ajax({
@@ -194,7 +213,7 @@ function quit(){
     });
     
     document.location.href = "#Home";
-}
+}*/
 
 function setCurrent_index(fullName) {
     var pointer = 0;
